@@ -14,6 +14,7 @@ import {
 } from "@repo/ui/components/ui/tabs";
 import { Metadata } from "next";
 import Image from "next/image";
+import { ModeToggle } from "~/components/themes/mode-toggle";
 import { CalendarDateRangePicker } from "./components/date-range-picker";
 import { MainNav } from "./components/main-nav";
 import { Overview } from "./components/overview";
@@ -47,7 +48,8 @@ export default function DashboardPage() {
         />
       </div>
       <div className="hidden flex-col md:flex">
-        <div className="border-b">
+        <AppNavBar />
+        {/* <div className="border-b">
           <div className="flex h-16 items-center px-4">
             <TeamSwitcher />
             <MainNav className="mx-6" />
@@ -56,7 +58,7 @@ export default function DashboardPage() {
               <UserNav />
             </div>
           </div>
-        </div>
+        </div> */}
         <div className="flex-1 space-y-4 p-8 pt-6">
           <div className="flex items-center justify-between space-y-2">
             <h2 className="text-3xl font-bold tracking-tight">Dashboard</h2>
@@ -208,5 +210,21 @@ export default function DashboardPage() {
         </div>
       </div>
     </>
+  );
+}
+
+function AppNavBar() {
+  return (
+    <div className="border-b">
+      <div className="flex h-16 items-center px-4">
+        <TeamSwitcher />
+        <MainNav className="mx-6" />
+        <div className="ml-auto flex items-center space-x-4">
+          <Search />
+          <UserNav />
+          <ModeToggle />
+        </div>
+      </div>
+    </div>
   );
 }

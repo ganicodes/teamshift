@@ -13,6 +13,7 @@
     "@repo/ui": "workspace:*",
     "date-fns": "^4.1.0",
     "next": "14.2.8",
+    "next-themes": "^0.3.0",
     "radix-ui": "^1.0.1",
     "react": "^18",
     "react-day-picker": "8.10.1",
