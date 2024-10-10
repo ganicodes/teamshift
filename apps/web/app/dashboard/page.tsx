@@ -213,7 +213,7 @@ export default function DashboardPage() {
   );
 }
 
-export function AppNavBar() {
+function AppNavBar() {
   return (
     <div className="border-b">
       <div className="flex h-16 items-center px-4">
